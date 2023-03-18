@@ -8,29 +8,40 @@ class Proveedor {
     }
 }
 
-const dell = new Proveedor(1,'dell',20123456711)
-const hp = new Proveedor(2,'hp',20123456721)
-const cisco = new Proveedor(3,'cisco',20123456731)
-const ricoh = new Proveedor(4,'ricoh',20123456741)
-const lexmark = new Proveedor(5,'lexmark',20123456751)
-const sony = new Proveedor (6,'sony',20123456761)
-const samsung = new Proveedor(7,'samsung',20123456771)
-
-//console.log(dell,hp,cisco,ricoh,lexmark,sony,samsung)
+const proveedores = [
+    new Proveedor(1,'dell',20123456711),
+    new Proveedor(2,'hp',20123456721),
+    new Proveedor(3,'cisco',20123456731),
+    new Proveedor(4,'ricoh',20123456741),
+    new Proveedor(5,'lexmark',20123456751),
+    new Proveedor (6,'sony',20123456761),
+    new Proveedor(7,'samsung',20123456771)
+]
 
 let seleccionarProveedor = parseInt(prompt('Solicitud de compra de un producto/servicio. \n\nSeleccione un proveedor, según el número que tiene asignado: 1.Dell - 2.HP - 3.Cisco - 4.Ricoh - 5.Lexmark - 6.Sony - 7.Samsung'))
 
 let proveedorSeleccionado = false
 
 let infoProveedor
+let proveedor
 
-while (proveedorSeleccionado === false){
+while(proveedorSeleccionado === false){
+    proveedor = proveedores.find((proveedor => proveedor.id===seleccionarProveedor))
+   if(!proveedor){
+        seleccionarProveedor = parseInt(prompt('Por favor ingrese un numero de acuerdo al proveedor: 1.Dell - 2.HP - 3.Cisco - 4.Ricoh - 5.Lexmark - 6.Sony - 7.Samsung'))
+       } else {
+        proveedorSeleccionado = true
+    }
+}
+
+
+/*while (proveedorSeleccionado === false){
     if(seleccionarProveedor != 0 && seleccionarProveedor <= 7){
         proveedorSeleccionado = true
     } else{
         seleccionarProveedor = parseInt(prompt('Por favor ingrese un numero de acuerdo al proveedor: 1.Dell - 2.HP - 3.Cisco - 4.Ricoh - 5.Lexmark - 6.Sony - 7.Samsung'))
     }
-}
+}*/
 
 /*
 while (proveedorSeleccionado === false){
@@ -146,6 +157,7 @@ for(i=1; i<=5; i++){
         item5.precio = precioingresado
         item5.subtotal = subtotalcalculado
     }
+    
     if (i < 5){
     let consulta = prompt('¿Desea agregar otro producto/servicio? \n Ingresa en minúscula "s" (SI) o "n" (NO).')
     if(consulta === 's'){
