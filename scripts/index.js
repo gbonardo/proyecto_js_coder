@@ -159,17 +159,18 @@ for(i=1; i<=5; i++){
     }
     
     if (i < 5){
-    let consulta = prompt('¿Desea agregar otro producto/servicio? \n Ingresa en minúscula "s" (SI) o "n" (NO).')
-    if(consulta === 's'){
-        
-      } else if (consulta === 'n'){
-        break
-      } else {
-        consulta = prompt('Ingresar según lo indicado a continuación: ¿Desea agregar otro producto/servicio? \n Ingresa en minúscula "s" (SI) o "n" (NO).')
-      }
-    } else{
+        let consulta = prompt('¿Desea agregar otro producto/servicio? \n Ingresa en minúscula "s" (SI) o "n" (NO).')
+        if(consulta === 's'){
+            
+          } else if (consulta === 'n'){
+            break
+          } else {
+            consulta = prompt('Ingresar según lo indicado a continuación: ¿Desea agregar otro producto/servicio? \n Ingresa en minúscula "s" (SI) o "n" (NO).')
+          }
+        } else{
+        }
+
     }
-}
 
 //console.log(item1, item2, item3, item4, item5)
 
