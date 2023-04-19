@@ -1,0 +1,11 @@
+[
+    {"id": 1, "razonsocial": "Dell", "cuit": 20123456711 },
+    {"id": 2, "razonsocial": "HP", "cuit": 20123456721 },
+    {"id": 3, "razonsocial": "Cisco", "cuit": 20123456731 },
+    {"id": 4, "razonsocial": "Ricoh", "cuit": 20123456741 },
+    {"id": 5, "razonsocial": "Lexmark", "cuit": 20123456751 },
+    {"id": 6, "razonsocial": "Sony", "cuit": 20123456761 },
+    {"id": 7, "razonsocial": "Samsung", "cuit": 20123456771 }
+
+]
+
