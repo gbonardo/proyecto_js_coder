@@ -127,6 +127,13 @@ numItem++
         precio: inputPrecio.value,
         subtotal: subTotal,
     }
+    console.log(datosItem)
+    console.log(inputCantidad.value)
+    console.log(inputDescripcion.value)
+    console.log(inputPrecio.value)
+    if(inputCantidad.value === "" || inputDescripcion.value === "" || inputPrecio.value === "" ){
+        alert('Completar todos los campos para agregar el producto/servicio en el planilla.')
+    } else {
     if(numItem <= 10){
     planilla.push(datosItem)          
     tbody.innerHTML += `<tr>
@@ -144,6 +151,7 @@ localStorage.setItem('planilla', JSON.stringify(planilla))
 tdtotal.innerHTML = `$  ${total}`
 } else {
     alert('No esta permitido agregar más de diez item')
+}
 }
 }
 

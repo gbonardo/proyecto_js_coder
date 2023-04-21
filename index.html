@@ -18,10 +18,11 @@
 </head>
 <body>
     <main>
+
         <section id="ingresarDatos">
-          <div class="col-md">
           <h1 id="titulo">Solicitud de Compra</h1>
         <br>
+        <div class="col-md">
             <div id="diviniciosesion">
               <form id="forminiciosesion">
                 <label for="">Nombre</label>
@@ -33,11 +34,13 @@
                 <input type="submit" value="Ingresar">
               </form>
             </div>
-          <br>
-          <hr>
-        <form class="row g-3" id="formulario" action="">
+          </div>
           
-            <label for="">Proveedores</label>
+          <br>
+        <hr>
+          <div class="col-md">
+          <form class="row g-3" id="formulario" action="">
+            <label for=""><b>Proveedores</b></label>
             <select class="form-select" name="proveedores" id="seleccionarProveedor" onchange="proveedorSeleccionado();">
                 <option value=""></option>
             </select>
@@ -53,27 +56,45 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><input type="number" name="cantidad" id="cantidad"></td>
-                    <td><input type="text" name="descripcion" id="descripcion"></td>
-                    <td><input type="number" name="precio" id="precio"></td>
-                    <td><label for="" id="subtotal"></label></td>
+                    <td><input type="number" class="form-control" name="cantidad" id="cantidad"></td>
+                    <td><input type="text" class="form-control"name="descripcion" id="descripcion"></td>
+                    <td><input type="number" class="form-control" name="precio" id="precio"></td>
+                    <td><label for=""  id="subtotal"></label></td>
                   </tr>
                 </tbody>
             </table>
+            <div class="container text-center">
+              <div class="row align-items-start">
+                <div class="col">
             <input type="submit" class="btn btn-outline-light" id="agregar" value="Agregar">
+            <input type="reset" class="btn btn-outline-light" value="Limpiar">
+          </div>
           
-        </form>
-      </div>
-    </section>
+        </div>
+          </form>
+          </div>
+          </section>
 
         <hr>
 
         <section id="planilla">
           <div class="col-md">
+            <h4>Proveedor</h4>
+            <div class="row align-items-start">
+              <div class="col">
             <label for="">Id:</label><p id="idProvSeleccionado"></p>
+          </div>
+          <div class="col">
             <label for="">Razón Social:</label><p id="rzProvSeleccionado"></p>
+          </div>
+          <div class="col">
             <label for="">Cuit:</label><p id="cuitProvSeleccionado"></p>
-            <br>
+          </div>
+        </div>
+      </div>
+            
+        <hr>
+        <div class="col-md">
             <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -95,6 +116,7 @@
             </table>
 
             <button type="button" class="btn btn-outline-light" id="crearPdf">Crear PDF</button>          
+          
           </div>
         </section>
     </main>
