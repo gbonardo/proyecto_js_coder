@@ -127,10 +127,6 @@ numItem++
         precio: inputPrecio.value,
         subtotal: subTotal,
     }
-    console.log(datosItem)
-    console.log(inputCantidad.value)
-    console.log(inputDescripcion.value)
-    console.log(inputPrecio.value)
     if(inputCantidad.value === "" || inputDescripcion.value === "" || inputPrecio.value === "" ){
         alert('Completar todos los campos para agregar el producto/servicio en el planilla.')
     } else {
