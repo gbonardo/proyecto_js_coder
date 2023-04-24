@@ -13,17 +13,14 @@
     <link rel="stylesheet" href="./styles/style.css">
     <!--jsPDF-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-      
     <title>ProyectoJS</title>
 </head>
 <body>
     <main>
-
-        <section id="ingresarDatos">
-          <h1 id="titulo">Solicitud de Compra</h1>
-        <br>
-        <div class="col-md">
-            <div id="diviniciosesion">
+        <h1 id="titulo">Solicitud de Compra</h1>
+        <!-- seccion ingreso de usuario -->
+        <section >
+          <div id="diviniciosesion">
               <form id="forminiciosesion">
                 <label for="">Nombre</label>
                 <input type="text" name="nombre" id="nombre">
@@ -33,19 +30,17 @@
                 <br>
                 <input type="submit" class="btn btn-outline-light" value="Ingresar">
               </form>
-            </div>
           </div>
-          
-          <br>
-        <hr>
-          <div class="col-md">
+        </section>
+        <!-- seccion formulario -->
+        <section id="ingresarDatos" class="ingresarDatos">
           <form class="row g-3" id="formulario" action="">
             <label for=""><b>Proveedores</b></label>
             <select class="form-select" name="proveedores" id="seleccionarProveedor" onchange="proveedorSeleccionado();">
                 <option value=""></option>
             </select>
             <br>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="tablaForm">
                 <thead>
                   <tr>
                     <th scope="col">Cantidad</th>
@@ -67,35 +62,25 @@
               <div class="row align-items-start">
                 <div class="col">
             <input type="submit" class="btn btn-outline-light" id="agregar" value="Agregar">
-            <input type="reset" class="btn btn-outline-light" value="Limpiar">
-          </div>
-          
-        </div>
+            <input type="reset" class="btn btn-outline-light" id="limpiar" value="Limpiar">
+            </div>
+            </div>
           </form>
-          </div>
-          </section>
+        </section>
 
-        <hr>
-
-        <section id="planilla">
-          <div class="col-md">
+        <!-- seccion planilla -->
+        <section id="planilla" class="planilla">
+          <div class="id-rs-rz">
             <h4>Proveedor</h4>
-            <div class="row align-items-start">
-              <div class="col">
-            <label for="">Id:</label><p id="idProvSeleccionado"></p>
-          </div>
-          <div class="col">
-            <label for="">Razón Social:</label><p id="rzProvSeleccionado"></p>
-          </div>
-          <div class="col">
-            <label for="">Cuit:</label><p id="cuitProvSeleccionado"></p>
-          </div>
-        </div>
+            <label for="">Id:</label>
+          <p id="idProvSeleccionado"></p>
+        <label for="">Razón Social:</label>
+          <p id="rzProvSeleccionado"></p>
+        <label for="">Cuit:</label>
+          <p id="cuitProvSeleccionado"></p>
       </div>
-            
-        <hr>
-        <div class="col-md">
-            <table class="table table-bordered">
+      <br>
+            <table class="table table-bordered" id="tablaPlanilla">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -114,17 +99,26 @@
                     <td id="tdtotal"></td>
                   </tr>
             </table>
-
-            <button type="button" class="btn btn-outline-light" id="crearPdf">Crear PDF</button>          
-          
+            <div class="container text-center">
+              <div class="row align-items-start">
+                <div class="col">
+            <button type="button" class="btn btn-outline-light" id="crearPdf">Crear PDF</button>   
+            <button type="button" class="btn btn-outline-light" id="cancelar">Cancelar</button>        
           </div>
+        </div>
         </section>
     </main>
 
+    <!-- footer -->
+  <footer class="pideDePagina">
+    <p>&copy;2023 - Gaston Bonardo</p>
+  </footer>
+
     <!--Boostrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
 crossorigin="anonymous"></script>
-    <script src="./scripts/index.js"></script>
+  <script src="./scripts/index.js"></script>
+
 </body>
 </html>

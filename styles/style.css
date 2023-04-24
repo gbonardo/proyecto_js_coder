@@ -1,10 +1,11 @@
 *{
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  box-sizing: border-box; 
 }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   background-color: #144766;
 }
@@ -37,5 +38,100 @@ body {
     color: white;
   }
 
-
+/* titulo */
+#titulo {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-decoration: underline;
+}
   
+  /***************** datos ingreso *****************/
+.bienvenida {
+  font-size: 2.5rem;
+  grid-column: 1 / 7;
+}
+#diviniciosesion {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+#forminiciosesion {
+  grid-column: 5 / 9;
+  gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.btn-ingresar {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+  
+/***************** ingresar datos *****************/
+.ingresarDatos {
+  background-color: rgba(0, 0, 0, 0.582);
+  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+}
+
+.btn-agregar {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+  /***************** planilla *****************/
+.planilla {
+  background-color: rgba(0, 0, 0, 0.582);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* id razon social cuit */
+.id-rs-rz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  margin-top: 2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+  /***************** botones pdf y vp *****************/
+.btn-pdf-vp {
+  text-align: center;
+}
+.crearPdf {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+.vistaPrevia {
+  padding: 0.5rem;  
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+  /**************** footer ****************/
+.pideDePagina {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 150px;
+}
+.pideDePagina p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
